@@ -1,40 +1,51 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { BurgerButton, NavbarLink } from '../../elements';
 import {
-  MenuContainer,
-  CloseButton,
-  UnorderedList,
   ListItem,
+  MenuContainer,
+  UnorderedList,
 } from './NavigationMenu.styles';
-import { NavbarLink, BurgerButton } from '../../elements';
 
 interface MenuProps {
-  openStatus: string;
+  openStatus: 'closed' | 'open';
+  onClick: () => void;
 }
 
-const NavigationMenu: FC<MenuProps> = ({ openStatus }) => {
-  const [menuStatus, setMenuStatus] = useState(openStatus || 'closed');
-
-  const handleCloseButton = () => {
-    setMenuStatus('closed');
-  };
-
+const NavigationMenu: FC<MenuProps> = ({ onClick, openStatus }) => {
   return (
-    <MenuContainer openStatus={menuStatus || 'closed'}>
-      <BurgerButton onClick={handleCloseButton}>&#10005;</BurgerButton>
+    <MenuContainer openStatus={openStatus || 'closed'}>
+      <BurgerButton navMenuButton onClick={onClick}>
+        &#10005;
+      </BurgerButton>
       <Router>
         <UnorderedList>
           <ListItem>
-            <NavbarLink fontSize="4rem" text="About" to="#" />
+            <NavbarLink onClick={onClick} fontSize="4rem" text="About" to="#" />
           </ListItem>
           <ListItem>
-            <NavbarLink fontSize="4rem" text="Portfolio" to="#" />
+            <NavbarLink
+              onClick={onClick}
+              fontSize="4rem"
+              text="Portfolio"
+              to="#"
+            />
           </ListItem>
           <ListItem>
-            <NavbarLink fontSize="4rem" text="Experiments" to="#" />
+            <NavbarLink
+              onClick={onClick}
+              fontSize="4rem"
+              text="Experiments"
+              to="#"
+            />
           </ListItem>
           <ListItem>
-            <NavbarLink fontSize="4rem" text="Contact" to="#" />
+            <NavbarLink
+              onClick={onClick}
+              fontSize="4rem"
+              text="Contact"
+              to="#"
+            />
           </ListItem>
         </UnorderedList>
       </Router>

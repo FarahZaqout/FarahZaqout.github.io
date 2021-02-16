@@ -3,10 +3,17 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { StyledNavbar, NavbarLinkContainer } from './Navbar.styles';
 import { NavbarLink, BurgerButton } from '../../elements';
 
-const Navbar: FC = () => {
+interface NavbarProps {
+  onClick: () => void;
+}
+
+const Navbar: FC<NavbarProps> = ({ onClick }) => {
   return (
     <StyledNavbar>
-      <BurgerButton>&#9776;</BurgerButton>
+      <BurgerButton onClick={onClick} desktopDisplay="none">
+        {/* html code for burger menu */}
+        &#9776;
+      </BurgerButton>
       <Router>
         <NavbarLinkContainer>
           <li>

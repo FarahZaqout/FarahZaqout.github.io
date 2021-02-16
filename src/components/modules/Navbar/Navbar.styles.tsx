@@ -21,7 +21,6 @@ export const StyledNavbar = styled(ReactNavbar)`
     max-width: 1440px;
     margin: 0 auto;
     height: 6rem;
-    max-height: 8rem;
     /* display */
     display: flex;
   }

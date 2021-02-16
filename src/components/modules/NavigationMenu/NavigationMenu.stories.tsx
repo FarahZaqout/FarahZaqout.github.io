@@ -12,5 +12,5 @@ interface MenuProps {
 }
 
 export const DefaultMenu: VFC<MenuProps> = () => (
-  <NavigationMenu openStatus="open" />
+  <NavigationMenu onClick={() => {}} openStatus="open" />
 );

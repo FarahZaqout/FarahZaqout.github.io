@@ -8,10 +8,17 @@ export interface NavbarLinkProps {
   fontSize?: string;
   className?: string;
   color?: string;
+  onClick?: () => void;
 }
 
-const StyledLink: FC<NavbarLinkProps> = ({ text, to, className, fontSize }) => (
-  <Link to={to} className={className}>
+const StyledLink: FC<NavbarLinkProps> = ({
+  text,
+  to,
+  className,
+  onClick,
+  fontSize,
+}) => (
+  <Link onClick={onClick} to={to} className={className}>
     {text}
   </Link>
 );

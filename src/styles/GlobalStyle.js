@@ -12,7 +12,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 10px;
     font-family: LeagueSpartan;
     background-color: ${({ theme }) => theme.colors.mainDark};
-    color: ${({ theme }) => theme.colors.mainLight}
+    color: ${({ theme }) => theme.colors.mainLight};
+    overflow: hidden;
   }
 
   * {

@@ -12,13 +12,15 @@ const ReactContainer: FC<CommonProps> = ({ children, className }) => (
 
 export const MenuContainer = styled(ReactContainer)`
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh + 6rem);
   background: ${({ theme }) => theme.colors.secondaryDark};
   display: flex;
   left: ${({ openStatus }) => (openStatus === 'open' ? '0' : '-100%;')};
+  top: -6rem;
   flex-direction: column;
-  position: relative;
+  position: absolute;
   transition: all 0.7s;
+  z-index: 3;
   @media screen and (min-width: 640px) {
     display: none;
   }
