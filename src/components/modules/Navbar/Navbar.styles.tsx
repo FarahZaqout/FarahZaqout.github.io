@@ -29,7 +29,7 @@ export const StyledNavbar = styled(ReactNavbar)`
 export const NavbarLinkContainer = styled(ReactContainer)`
   display: none;
   @media screen and (min-width: 640px) {
-    margin: 0 8rem 0 auto;
+    margin: 0 12rem 0 auto;
     list-style: none;
     display: flex;
     align-items: flex-end;
