@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import LandingPage from './Landing';
+import LandingPage from './LandingPage';
 
 export default {
   title: 'Landing Page',

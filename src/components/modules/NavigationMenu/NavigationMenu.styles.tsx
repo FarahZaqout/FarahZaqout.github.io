@@ -13,7 +13,7 @@ const ReactContainer: FC<CommonProps> = ({ children, className }) => (
 export const MenuContainer = styled(ReactContainer)`
   width: 100vw;
   height: calc(100vh + 6rem);
-  background: ${({ theme }) => theme.colors.secondaryDark};
+  background: ${({ theme }) => theme.backgrounds.secondary};
   display: flex;
   left: ${({ openStatus }) => (openStatus === 'open' ? '0' : '-100%;')};
   top: -6rem;

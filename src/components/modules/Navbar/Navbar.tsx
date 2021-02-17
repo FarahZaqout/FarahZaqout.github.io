@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { StyledNavbar, NavbarLinkContainer } from './Navbar.styles';
-import { NavbarLink, BurgerButton } from '../../elements';
+import { NavbarLink, BurgerButton } from '../../common';
 
 interface NavbarProps {
   onClick: () => void;
@@ -17,16 +17,16 @@ const Navbar: FC<NavbarProps> = ({ onClick }) => {
       <Router>
         <NavbarLinkContainer>
           <li>
-            <NavbarLink text="About" to="#" />
+            <NavbarLink ariaLable="About" text="About" to="#" />
           </li>
           <li>
-            <NavbarLink text="Portfolio" to="#" />
+            <NavbarLink ariaLable="Portfolio" text="Portfolio" to="#" />
           </li>
           <li>
-            <NavbarLink text="Experiments" to="#" />
+            <NavbarLink ariaLable="Experiments" text="Experiments" to="#" />
           </li>
           <li>
-            <NavbarLink text="Contact" to="#" />
+            <NavbarLink ariaLable="Contact" text="Contact" to="#" />
           </li>
         </NavbarLinkContainer>
       </Router>

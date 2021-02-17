@@ -6,9 +6,16 @@ const NavigationLink: FC<NavbarLinkProps> = ({
   to,
   fontSize,
   onClick,
+  ariaLable,
 }) => {
   return (
-    <NavbarLink onClick={onClick} fontSize={fontSize} text={text} to={to} />
+    <NavbarLink
+      ariaLable={ariaLable}
+      onClick={onClick}
+      fontSize={fontSize}
+      text={text}
+      to={to}
+    />
   );
 };
 

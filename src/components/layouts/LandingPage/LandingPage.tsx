@@ -1,6 +1,6 @@
 import { FC, useReducer } from 'react';
-import { LandingSection } from './Landing.styles';
-import { NavigationMenu, Navbar, Header } from '../../modules';
+import { LandingSection } from './LandingPage.styles';
+import { NavigationMenu, Navbar, Header, Portfolio } from '../../modules';
 import { navContext, setNavState, navReducer } from '../../../context';
 
 const LandingPage: FC = () => {
@@ -8,7 +8,6 @@ const LandingPage: FC = () => {
   const { openStatus } = state;
 
   const handleBurgerClick = () => {
-    console.log('kurwa');
     if (openStatus === 'open') return dispatch(setNavState('closed'));
     return dispatch(setNavState('open'));
   };
@@ -17,6 +16,7 @@ const LandingPage: FC = () => {
       <Navbar onClick={handleBurgerClick} />
       <NavigationMenu onClick={handleBurgerClick} openStatus={openStatus} />
       <Header />
+      <Portfolio />
     </LandingSection>
   );
 };

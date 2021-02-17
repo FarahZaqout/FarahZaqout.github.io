@@ -5,4 +5,4 @@ export default {
   title: 'Navbar',
 };
 
-export const DefaultNavbar: FC = () => <Navbar />;
+export const DefaultNavbar: FC = () => <Navbar onClick={() => {}} />;

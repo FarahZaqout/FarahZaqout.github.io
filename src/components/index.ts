@@ -1,1 +1,1 @@
-export { NavigationMenu } from './modules/NavigationMenu';
+export { LandingPage } from './layouts';

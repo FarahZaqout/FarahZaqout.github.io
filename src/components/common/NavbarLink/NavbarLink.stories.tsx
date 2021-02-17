@@ -8,7 +8,7 @@ export default {
 
 export const DefaultNavLink: FC = () => (
   <Router>
-    <NavigationLink text="About" to="/" />
-    <NavigationLink fontSize="3rem" text="About" to="/" />
+    <NavigationLink ariaLable="about" text="About" to="/" />
+    <NavigationLink ariaLable="about" fontSize="3rem" text="About" to="/" />
   </Router>
 );

@@ -9,6 +9,7 @@ export interface NavbarLinkProps {
   className?: string;
   color?: string;
   onClick?: () => void;
+  ariaLable: string;
 }
 
 const StyledLink: FC<NavbarLinkProps> = ({
@@ -16,9 +17,9 @@ const StyledLink: FC<NavbarLinkProps> = ({
   to,
   className,
   onClick,
-  fontSize,
+  ariaLable,
 }) => (
-  <Link onClick={onClick} to={to} className={className}>
+  <Link aria-label={ariaLable} onClick={onClick} to={to} className={className}>
     {text}
   </Link>
 );
