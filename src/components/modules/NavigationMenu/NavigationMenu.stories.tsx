@@ -1,10 +1,9 @@
 import { VFC } from 'react';
-import NavigationLink from '../../elements/NavbarLink/NavbarLink';
 import NavigationMenu from './NavigationMenu';
 
 export default {
   title: 'Navigation Menu',
-  component: NavigationLink,
+  component: NavigationMenu,
 };
 
 interface MenuProps {
