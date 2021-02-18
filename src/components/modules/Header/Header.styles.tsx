@@ -1,29 +1,25 @@
 import { FC } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { TOTAL_OVERLAY_DURATION, HEADER_TEXT_DURATION } from '../../../util';
+
+const totalDuration = TOTAL_OVERLAY_DURATION + HEADER_TEXT_DURATION - 0.5;
+const totalAnimationDelay = `${totalDuration}s`;
 
 const slideTitlePhone = keyframes`
   0% {
-    margin-left: 4rem;
+    margin-left: 6rem;
     opacity: 0;
-  }
-
-  50% {
-    opacity: 0.7;
   }
   100% {
     opacity: 1;
-    margin-left: 8rem;
+    margin-left: 6rem;
   }
 `;
 
 const slideTitleDesktop = keyframes`
   0% {
-    margin-left: 14rem;
+    margin-left: 16rem;
     opacity: 0;
-  }
-
-  50% {
-    opacity: 0.7;
   }
   100% {
     opacity: 1;
@@ -43,6 +39,7 @@ export const HeaderContainer = styled(ReactContainer)`
   width: 100%;
   height: 100%;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
 `;
@@ -57,10 +54,10 @@ export const HeaderParagraph = styled(ReactParagraph)`
   font-style: italic;
   font-family: 'Times New Roman', Times, serif;
   opacity: 0;
-  animation: ${slideTitlePhone} 0.7s 0.7s forwards ease-out;
+  animation: ${slideTitlePhone} 1s ${totalAnimationDelay} forwards ease-out;
   max-width: 70%;
   @media screen and (min-width: 640px) {
     margin-top: 0;
-    animation: ${slideTitleDesktop} 0.7s 0.7s forwards ease-out;
+    animation: ${slideTitleDesktop} 1s ${totalAnimationDelay} forwards ease-out;
   }
 `;

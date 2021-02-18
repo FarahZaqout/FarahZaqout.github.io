@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export interface NavbarLinkProps {
   text: string;
@@ -27,7 +27,7 @@ const StyledLink: FC<NavbarLinkProps> = ({
 export const NavbarLink = styled(StyledLink)`
   font-size: ${({ fontSize }) => fontSize || '1.6rem'};
   padding: 0 0 0.3rem 0;
-  margin: 0 10px;
+  margin: 0 1rem;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.secondaryLight};
   position: relative;

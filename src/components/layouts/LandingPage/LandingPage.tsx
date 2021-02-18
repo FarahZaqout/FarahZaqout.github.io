@@ -1,10 +1,10 @@
 import { FC, useReducer } from 'react';
 import { LandingSection } from './LandingPage.styles';
 import { NavigationMenu, Navbar, Header, Portfolio } from '../../modules';
-import { navContext, setNavState, navReducer } from '../../../context';
+import { setNavState, navReducer } from '../../../context';
 
 const LandingPage: FC = () => {
-  const [state, dispatch] = useReducer(navReducer, { openStatus: 'open' });
+  const [state, dispatch] = useReducer(navReducer, { openStatus: 'closed' });
   const { openStatus } = state;
 
   const handleBurgerClick = () => {

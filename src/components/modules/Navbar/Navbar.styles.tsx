@@ -18,7 +18,6 @@ export const StyledNavbar = styled(ReactNavbar)`
   justify-content: flex-end;
   @media screen and (min-width: 640px) {
     /* basic styles */
-    max-width: 1440px;
     margin: 0 auto;
     height: 6rem;
     /* display */
@@ -29,7 +28,7 @@ export const StyledNavbar = styled(ReactNavbar)`
 export const NavbarLinkContainer = styled(ReactContainer)`
   display: none;
   @media screen and (min-width: 640px) {
-    margin: 0 12rem 0 auto;
+    margin: 0 15rem 0 auto;
     list-style: none;
     display: flex;
     align-items: flex-end;

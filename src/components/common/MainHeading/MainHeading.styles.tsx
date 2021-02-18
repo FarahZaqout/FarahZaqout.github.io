@@ -1,5 +1,10 @@
 import { FC } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { TOTAL_OVERLAY_DURATION } from '../../../util';
+
+const totalAnimationDelay = TOTAL_OVERLAY_DURATION - 0.6;
+
+const animationDelay = `${totalAnimationDelay}s`;
 
 const slideTitlePhone = keyframes`
   0% {
@@ -8,11 +13,11 @@ const slideTitlePhone = keyframes`
   }
 
   50% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   100% {
     opacity: 1;
-    margin-left: 8rem;
+    margin-left: 6rem;
   }
 `;
 
@@ -23,7 +28,7 @@ const slideTitleDesktop = keyframes`
   }
 
   50% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   100% {
     opacity: 1;
@@ -42,15 +47,16 @@ const ReactHeading: FC<CommonProps> = ({ className, children }) => {
 
 export const StyledHeading = styled(ReactHeading)`
   font-size: 5rem;
+  opacity: 0;
   width: 60%;
   color: ${({ theme }) => theme.colors.mainLight};
-  animation: ${slideTitlePhone} 0.7s forwards ease-out;
+  animation: ${slideTitlePhone} 0.8s ${animationDelay} forwards ease-out;
   text-transform: capitalize;
   font-style: ${({ italic }) => (italic ? 'italic' : 'normal')};
   margin: -18rem 0 0 0;
   @media screen and (min-width: 640px) {
     width: 60%;
     font-size: 7rem;
-    animation: ${slideTitleDesktop} 0.7s forwards ease-out;
+    animation: ${slideTitleDesktop} 0.8s ${animationDelay} forwards ease-out;
   }
 `;

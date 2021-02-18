@@ -20,7 +20,7 @@ export const MenuContainer = styled(ReactContainer)`
   flex-direction: column;
   position: absolute;
   transition: all 0.7s;
-  z-index: 3;
+  z-index: 4;
   @media screen and (min-width: 640px) {
     display: none;
   }

@@ -2,6 +2,8 @@ import { FC } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { OVERLAY_TEXT_DURATION } from '../../../util';
 
+const overlayAnimationPeriod = `${OVERLAY_TEXT_DURATION}s`;
+
 const SlideOverlay = keyframes`
   0% {
     left: 0;
@@ -48,17 +50,21 @@ const Reactparagraph: FC<CommonProps> = ({ className, children }) => {
 export const OverlayBackground = styled(ReactDiv)`
   position: absolute;
   left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  top: -6rem;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
   background: ${({ backgroundColor }) => backgroundColor};
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: ${SlideOverlay} 1s ${OVERLAY_TEXT_DURATION} forwards;
+  animation: ${SlideOverlay} 1s ${overlayAnimationPeriod} forwards;
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 `;
 
 export const OverlayText = styled(Reactparagraph)`
   font-size: 13rem;
-  animation: ${showText} ${OVERLAY_TEXT_DURATION} forwards;
+  animation: ${showText} ${overlayAnimationPeriod} forwards;
 `;

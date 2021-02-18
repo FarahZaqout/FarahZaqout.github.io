@@ -2,4 +2,5 @@ export {
   OVERLAY_TEXT_DURATION,
   OVERLAY_BACKGROUND_DURATION,
   TOTAL_OVERLAY_DURATION,
-} from './AnimationDelays';
+  HEADER_TEXT_DURATION,
+} from './AnimationDurations';
