@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import LeagueSpartan from '../assets/leaguespartan-bold.woff';
+import Cursor from '../assets/images/cursor.svg';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -19,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    cursor: url(${Cursor}), auto;
   }
 `;
 

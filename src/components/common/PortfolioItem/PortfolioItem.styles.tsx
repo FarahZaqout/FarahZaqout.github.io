@@ -38,7 +38,6 @@ export const PortfolioItemWrapper = styled(ReactPortfolioItemContainer)`
 
   position: relative;
   overflow-x: hidden;
-  cursor: pointer;
 
   color: ${({ theme, background }) =>
     background === 'dark' ? theme.colors.mainLight : theme.colors.mainDark};

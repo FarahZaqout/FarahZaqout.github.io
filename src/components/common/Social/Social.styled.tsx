@@ -57,7 +57,6 @@ const iconCreator = (icon: FC): FC => styled(icon)`
   margin: 1rem 4rem 1rem 0;
   fill: #cecece;
   transition: all 0.3s;
-  cursor: pointer;
   &:hover {
     fill: #fff;
     transform: scale(1.2);

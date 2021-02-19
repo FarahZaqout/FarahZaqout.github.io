@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import darkCursor from '../../../assets/images/darkCursor.svg';
 
 interface CommonProps {
   className?: string;
@@ -16,4 +17,6 @@ export const PortfolioSection = styled(ReactSection)`
 
   display: flex;
   flex-direction: column;
+
+  cursor: url(${darkCursor}), auto;
 `;
