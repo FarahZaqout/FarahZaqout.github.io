@@ -103,7 +103,7 @@ export const PortfolioItemContainer = styled(ReactChildContainer)`
     box-shadow: 0px 11px 36px 12px rgba(0, 0, 0, 0.23);
     opacity: 0;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     ${({ visible, index }) =>
       createAnimation(visible[index], 'default', index)};
   }
@@ -117,14 +117,17 @@ export const PortfolioItemContainer = styled(ReactChildContainer)`
 `;
 
 export const PortfolioItemMask = styled(ReactMask)`
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 4;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background: #fcc203;
-  ${({ visible, index }) =>
-    visible[index] ? createMaskAnimation(visible[index]) : ''}
+  display: none;
+  @media screen and (min-width: 640px) {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background: #fcc203;
+    ${({ visible, index }) =>
+      visible[index] ? createMaskAnimation(visible[index]) : ''}
+  }
 `;
