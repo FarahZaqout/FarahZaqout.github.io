@@ -1,5 +1,10 @@
 import { css, FlattenSimpleInterpolation } from 'styled-components';
-import { defaultSlide, slideInLaptop, slideInLaptopOdd } from './keyframes';
+import {
+  defaultSlide,
+  slideInLaptop,
+  slideInLaptopOdd,
+  MaskAnimation,
+} from './keyframes';
 
 const getAnimation = (screen: string, index: number) => {
   let animation;
@@ -13,32 +18,35 @@ const getAnimation = (screen: string, index: number) => {
 };
 
 type CSSInterpolation = FlattenSimpleInterpolation | string;
-
+type Screens = 'laptop' | 'wide screen' | 'default';
 // isVisible prop is passed via the styled comoponent.
 // Triggers animation when the intersection observer detects a new element
 const createAnimation = (
   visible: boolean,
-  screen: 'laptop' | 'wide screen' | 'small screen',
+  screen: Screens,
   index: number,
 ): CSSInterpolation => {
   const animation = getAnimation(screen, index);
   const result = visible
     ? css`
-        animation: ${animation} 1.5s forwards cubic-bezier(0.2, 0.09, 0.25, 0.9);
+        animation: ${animation} 1.5s 0.3s forwards
+          cubic-bezier(0.2, 0.09, 0.25, 0.9);
       `
     : '';
 
   return result;
 };
 
-export default createAnimation;
+const createMaskAnimation = (
+  isVisible: boolean,
+): FlattenSimpleInterpolation | string => {
+  const result = isVisible
+    ? css`
+        animation: ${MaskAnimation} 1s 0.3s forwards;
+      `
+    : '';
 
-// const createMaskAnimation = (isVisible: boolean) => {
-//   const result = isVisible
-//     ? css`
-//         animation: ${slideMask} 1s 0.5s forwards;
-//       `
-//     : '';
+  return result;
+};
 
-//   return result;
-// };
+export { createAnimation, createMaskAnimation };

@@ -1,1 +1,1 @@
-export { default as createAnimation } from './createAnimation';
+export { createAnimation, createMaskAnimation } from './createAnimation';

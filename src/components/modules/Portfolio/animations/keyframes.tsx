@@ -13,7 +13,7 @@ export const defaultSlide = keyframes`
 
 export const slideInLaptop = keyframes`
 0% {
-  opacity: 1;
+  opacity: 0;
   transform: translateX(calc(50vw - 80%)) translateY(16rem) scale(0.7);
 }
 100% {
@@ -24,11 +24,22 @@ export const slideInLaptop = keyframes`
 
 export const slideInLaptopOdd = keyframes`
   0% {
-  opacity: 1;
+  opacity: 0;
   transform: translateX(calc(50vw)) translateY(16rem) scale(0.7);
 }
 100% {
   opacity: 1;
   transform: translateX(calc(50vw - 50%)) translateY(15.5rem) scale(1);
+}
+`;
+
+export const MaskAnimation = keyframes`
+  0% {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+100% {
+  opacity: 1;
+  transform: translateX(100%);
 }
 `;

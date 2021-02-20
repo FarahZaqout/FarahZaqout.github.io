@@ -1,5 +1,9 @@
 import { FC, useState } from 'react';
-import { PortfolioSection, PortfolioItemContainer } from './Portfolio.styles';
+import {
+  PortfolioSection,
+  PortfolioItemContainer,
+  PortfolioItemMask,
+} from './Portfolio.styles';
 import { SectionTitle, PortfolioItem } from '../../common';
 import IncomeSourceDT from '../../../assets/images/landing/income.webp';
 import IncomeSourcePhone from '../../../assets/images/landing/incomephone.webp';
@@ -16,6 +20,7 @@ const MyComponent: FC = () => {
         setVisible={setVisible}
         visible={visible}
       >
+        <PortfolioItemMask index={0} visible={visible} />
         <PortfolioItem
           title="Income Source"
           subtitle="Affiliate Marketing and Income blog"
@@ -29,6 +34,7 @@ const MyComponent: FC = () => {
         setVisible={setVisible}
         visible={visible}
       >
+        <PortfolioItemMask index={1} visible={visible} />
         <PortfolioItem
           title="PressPad"
           subtitle="Journalism networking and mentoring platform"

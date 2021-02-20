@@ -37,6 +37,7 @@ export const PortfolioItemWrapper = styled(ReactPortfolioItemContainer)`
     background === 'dark' ? theme.backgrounds.dark : theme.backgrounds.light};
   background-image: url(${({ phoneBg }) => phoneBg});
   background-size: cover;
+  background-position: center;
 
   display: flex;
   flex-direction: column;
