@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { OVERLAY_TEXT_DURATION } from '../../../util';
+import DarkCursor from '../../../assets/images/darkCursor.svg';
 
 const overlayAnimationPeriod = `${OVERLAY_TEXT_DURATION}s`;
 
@@ -58,7 +59,9 @@ export const OverlayBackground = styled(ReactDiv)`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: url(${DarkCursor}), auto;
   animation: ${SlideOverlay} 1s ${overlayAnimationPeriod} forwards;
+
   @media screen and (max-width: 640px) {
     display: none;
   }

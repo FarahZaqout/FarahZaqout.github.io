@@ -52,16 +52,16 @@ const ReactChildContainer: FC<ContainerProps> = ({
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (!visible[index]) {
-            const newVisibilityArray = [...visible];
-            newVisibilityArray[index] = true;
-            setVisible(newVisibilityArray);
-          }
+        if (entry.isIntersecting && !visible[index]) {
+          const newVisibilityArray = [...visible];
+          newVisibilityArray[index] = true;
+          setVisible(newVisibilityArray);
         }
       });
     };
-    const observer = new IntersectionObserver(observerCallback);
+    const observer = new IntersectionObserver(observerCallback, {
+      rootMargin: '-300px',
+    });
     if (ref.current) {
       const currentElement = ref.current;
       observer.observe(currentElement);
