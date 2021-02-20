@@ -7,7 +7,6 @@ export interface CommonProps {
   background?: 'dark' | 'light';
   desktopBg?: string;
   phoneBg?: string;
-  alignment?: 'left' | 'right';
   tabIndex?: number;
   ariaLabel?: string;
 }
@@ -25,13 +24,6 @@ const ReactPortfolioItemContainer: FC<CommonProps> = ({
   );
 };
 
-export const PortfolioItemContainer = styled(ReactPortfolioItemContainer)`
-  width: 80%;
-  height: 48rem;
-  max-width: 92rem;
-  margin: 13.5rem auto 0;
-`;
-
 export const PortfolioItemWrapper = styled(ReactPortfolioItemContainer)`
   width: 100%;
   height: 100%;
@@ -43,8 +35,6 @@ export const PortfolioItemWrapper = styled(ReactPortfolioItemContainer)`
     background === 'dark' ? theme.colors.mainLight : theme.colors.mainDark};
   background: ${({ theme, background }) =>
     background === 'dark' ? theme.backgrounds.dark : theme.backgrounds.light};
-  box-shadow: 0px 11px 36px 12px rgba(0, 0, 0, 0.23);
-
   background-image: url(${({ phoneBg }) => phoneBg});
   background-size: cover;
 
@@ -89,12 +79,7 @@ export const PortfolioItemWrapper = styled(ReactPortfolioItemContainer)`
     background-image: url(${({ desktopBg }) => desktopBg});
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    margin: ${({ alignment }) =>
-      alignment === 'left'
-        ? '0 0 0 -3rem' // if left
-        : alignment === 'right'
-        ? '0 0 0 3rem' // else if right
-        : ''}; // else
+    margin: 0;
   }
 `;
 

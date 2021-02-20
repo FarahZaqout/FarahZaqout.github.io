@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import {
-  PortfolioItemContainer,
   PortfolioItemWrapper,
   ItemTitle,
   ItemSubtitle,
@@ -21,25 +20,21 @@ const PortfolioItem: FC<PortfolioItemProps> = ({
   subtitle,
   phoneBg,
   desktopBg,
-  alignment,
   tabIndex,
 }) => {
   return (
-    <PortfolioItemContainer>
-      <PortfolioItemWrapper
-        tabIndex={tabIndex}
-        phoneBg={phoneBg}
-        desktopBg={desktopBg}
-        background={background}
-        alignment={alignment}
-        ariaLabel={title}
-      >
-        <InfoContainer>
-          <ItemTitle>{title}</ItemTitle>
-          <ItemSubtitle>{subtitle}</ItemSubtitle>
-        </InfoContainer>
-      </PortfolioItemWrapper>
-    </PortfolioItemContainer>
+    <PortfolioItemWrapper
+      tabIndex={tabIndex}
+      phoneBg={phoneBg}
+      desktopBg={desktopBg}
+      background={background}
+      ariaLabel={title}
+    >
+      <InfoContainer>
+        <ItemTitle>{title}</ItemTitle>
+        <ItemSubtitle>{subtitle}</ItemSubtitle>
+      </InfoContainer>
+    </PortfolioItemWrapper>
   );
 };
 

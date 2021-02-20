@@ -6,12 +6,13 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: LeagueSpartan;
     src: url(${LeagueSpartan}) format('woff');
+    font-display: swap;
   }
   html, body, #root, .App {
     width: 100%;
     height: 100%;
     font-size: 10px;
-    font-family: LeagueSpartan;
+    font-family: LeagueSpartan, Arial, Helvetica, sans-serif;
     background-color: ${({ theme }) => theme.backgrounds.dark};
     color: ${({ theme }) => theme.colors.mainLight};
     overflow-x: hidden;

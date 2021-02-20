@@ -7,23 +7,23 @@ const totalAnimationDelay = `${totalDuration}s`;
 
 const slideTitlePhone = keyframes`
   0% {
-    margin-left: 6rem;
+    transform: translateX(4rem);
     opacity: 0;
   }
   100% {
     opacity: 1;
-    margin-left: 6rem;
+    transform: translateX(6rem);
   }
 `;
 
 const slideTitleDesktop = keyframes`
   0% {
-    margin-left: 16rem;
+    transform: translateX(16rem);
     opacity: 0;
   }
   100% {
     opacity: 1;
-    margin-left: 18rem;
+    transform: translateX(18rem);
   }
 `;
 

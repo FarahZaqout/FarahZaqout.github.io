@@ -4,8 +4,8 @@ import { NavigationMenu, Navbar, Header, Portfolio } from '../../modules';
 import { setNavState, navReducer } from '../../../context';
 
 const LandingPage: FC = () => {
-  const [state, dispatch] = useReducer(navReducer, { openStatus: 'closed' });
-  const { openStatus } = state;
+  const [navState, dispatch] = useReducer(navReducer, { openStatus: 'closed' });
+  const { openStatus } = navState;
 
   const handleBurgerClick = () => {
     if (openStatus === 'open') return dispatch(setNavState('closed'));

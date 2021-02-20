@@ -8,7 +8,7 @@ const animationDelay = `${totalAnimationDelay}s`;
 
 const slideTitlePhone = keyframes`
   0% {
-    margin-left: -40rem;
+    transform: translateX(-20rem);
     opacity: 0;
   }
 
@@ -17,13 +17,13 @@ const slideTitlePhone = keyframes`
   }
   100% {
     opacity: 1;
-    margin-left: 6rem;
+    transform: translateX(6rem);
   }
 `;
 
 const slideTitleDesktop = keyframes`
   0% {
-    margin-left: -20rem;
+    transform: translateX(-20rem);
     opacity: 0;
   }
 
@@ -32,7 +32,7 @@ const slideTitleDesktop = keyframes`
   }
   100% {
     opacity: 1;
-    margin-left: 18rem;
+    transform: translateX(18rem);
   }
 `;
 

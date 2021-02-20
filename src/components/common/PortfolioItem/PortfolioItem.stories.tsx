@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import PortfolioItem from './PortfolioItem';
-import IncomeSource from '../../../assets/images/landing/income.png';
-import IncomeSourcePhone from '../../../assets/images/landing/incomephone.png';
+import IncomeSource from '../../../assets/images/landing/income.webp';
+import IncomeSourcePhone from '../../../assets/images/landing/incomephone.webp';
 
 export default {
   title: 'Portfolio Item',

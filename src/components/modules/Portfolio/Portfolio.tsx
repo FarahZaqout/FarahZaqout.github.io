@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { PortfolioSection } from './Portfolio.styles';
 import { SectionTitle, PortfolioItem } from '../../common';
-import IncomeSourceDT from '../../../assets/images/landing/income.png';
-import IncomeSourcePhone from '../../../assets/images/landing/incomephone.png';
-import PressPad from '../../../assets/images/landing/presspad.png';
-import PressPadPhone from '../../../assets/images/landing/presspadphone.png';
+import IncomeSourceDT from '../../../assets/images/landing/income.webp';
+import IncomeSourcePhone from '../../../assets/images/landing/incomephone.webp';
+import PressPad from '../../../assets/images/landing/presspad.webp';
+import PressPadPhone from '../../../assets/images/landing/presspadphone.webp';
 
 const MyComponent: FC = () => {
   return (
@@ -15,7 +15,6 @@ const MyComponent: FC = () => {
         subtitle="Affiliate Marketing and Income blog post"
         desktopBg={IncomeSourceDT}
         phoneBg={IncomeSourcePhone}
-        alignment="left"
         tabIndex={0}
       />
       <PortfolioItem
@@ -23,7 +22,6 @@ const MyComponent: FC = () => {
         subtitle="Journalism networking and mentoring platform"
         desktopBg={PressPad}
         phoneBg={PressPadPhone}
-        alignment="right"
         tabIndex={0}
       />
     </PortfolioSection>

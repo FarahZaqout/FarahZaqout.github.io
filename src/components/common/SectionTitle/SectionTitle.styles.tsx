@@ -6,14 +6,14 @@ interface CommonProps {
   color?: string;
 }
 
-const ReactSectionTitle: FC<CommonProps> = ({ className, children, color }) => {
+const ReactSectionTitle: FC<CommonProps> = ({ className, children }) => {
   return <h2 className={className}>{children}</h2>;
 };
 
 export const StyledSectionTitle = styled(ReactSectionTitle)`
   font-size: 4rem;
   margin: 8rem auto 0;
-  width: 100%;
+  width: auto;
   text-align: center;
   color: ${({ theme, color }) =>
     color === 'light' ? theme.colors.mainLight : theme.colors.mainDark};
