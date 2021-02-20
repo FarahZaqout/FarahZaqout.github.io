@@ -67,4 +67,6 @@ export const OverlayBackground = styled(ReactDiv)`
 export const OverlayText = styled(Reactparagraph)`
   font-size: 13rem;
   animation: ${showText} ${overlayAnimationPeriod} forwards;
+  font-family: Helvetica, sans-serif;
+  font-weight: 900;
 `;

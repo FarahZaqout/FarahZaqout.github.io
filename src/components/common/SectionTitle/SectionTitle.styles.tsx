@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 
-interface CommonProps {
+export interface DefaultProps {
   className?: string;
   color?: string;
 }
 
-const ReactSectionTitle: FC<CommonProps> = ({ className, children }) => {
+const ReactSectionTitle: FC<DefaultProps> = ({ className, children }) => {
   return <h2 className={className}>{children}</h2>;
 };
 

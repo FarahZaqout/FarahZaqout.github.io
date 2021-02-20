@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { StyledSectionTitle } from './SectionTitle.styles';
+import { StyledSectionTitle, DefaultProps } from './SectionTitle.styles';
 
-const SectionTitle: FC = ({ children }) => {
-  return <StyledSectionTitle>{children}</StyledSectionTitle>;
+const SectionTitle: FC<DefaultProps> = ({ children, color }) => {
+  return <StyledSectionTitle color={color}>{children}</StyledSectionTitle>;
 };
 
 export default SectionTitle;

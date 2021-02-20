@@ -19,10 +19,6 @@ interface DefaultProps {
   className?: string;
 }
 
-const ReactSection: FC<DefaultProps> = ({ className, children }) => {
-  return <section className={className}>{children}</section>;
-};
-
 interface IntersectionProps {
   visible: boolean[];
   setVisible: Dispatch<SetStateAction<boolean[]>>;
@@ -30,6 +26,10 @@ interface IntersectionProps {
 }
 
 type ContainerProps = DefaultProps & IntersectionProps;
+
+const ReactSection: FC<DefaultProps> = ({ className, children }) => {
+  return <section className={className}>{children}</section>;
+};
 
 const ReactChildContainer: FC<ContainerProps> = ({
   className,
