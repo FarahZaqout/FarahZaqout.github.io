@@ -48,7 +48,10 @@ const Footer: FC = () => {
             </StyledAnchor>
           </FooterLi>
           <FooterLi>
-            <StyledAnchor href="#" target="_blank">
+            <StyledAnchor
+              href="https://www.upwork.com/freelancers/~01b848edcc0b44b61b"
+              target="_blank"
+            >
               <UpworkIcon />
             </StyledAnchor>
           </FooterLi>

@@ -12,9 +12,12 @@ const ReactSectionTitle: FC<DefaultProps> = ({ className, children }) => {
 
 export const StyledSectionTitle = styled(ReactSectionTitle)`
   font-size: 4rem;
-  margin: 8rem auto 0;
   width: auto;
   text-align: center;
+  margin: 8rem auto 0;
   color: ${({ theme, color }) =>
     color === 'light' ? theme.colors.mainLight : theme.colors.mainDark};
+  @media screen and (min-width: 640px) {
+    margin: 8rem auto 10rem;
+  }
 `;

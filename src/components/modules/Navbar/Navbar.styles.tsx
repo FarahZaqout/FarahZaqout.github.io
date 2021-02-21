@@ -14,6 +14,7 @@ const ReactContainer: FC<CommonProps> = ({ className, children }) => {
 };
 
 export const StyledNavbar = styled(ReactNavbar)`
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   @media screen and (min-width: 640px) {

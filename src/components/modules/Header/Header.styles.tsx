@@ -38,6 +38,7 @@ const ReactContainer: FC<CommonProps> = ({ className, children }) => {
 export const HeaderContainer = styled(ReactContainer)`
   width: 100%;
   height: 100%;
+  min-height: 100vh;
   display: flex;
   position: relative;
   flex-direction: column;

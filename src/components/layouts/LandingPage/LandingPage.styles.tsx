@@ -12,4 +12,6 @@ const ReactSection: FC<CommponProps> = ({ className, children }) => {
 export const LandingSection = styled(ReactSection)`
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 `;

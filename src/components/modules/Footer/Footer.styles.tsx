@@ -55,9 +55,14 @@ const ReactHeading: FC<DefaultProps> = ({ className, children }) => {
   return <h2 className={className}>{children}</h2>;
 };
 
-const ReactAnchor: FC<AnchorProps> = ({ className, children, href }) => {
+const ReactAnchor: FC<AnchorProps> = ({
+  className,
+  children,
+  href,
+  target,
+}) => {
   return (
-    <a href={href} className={className}>
+    <a href={href} target={target} className={className}>
       {children}
     </a>
   );
@@ -65,6 +70,10 @@ const ReactAnchor: FC<AnchorProps> = ({ className, children, href }) => {
 
 const ReactForm: FC<DefaultProps> = ({ className, children }) => {
   return <form className={className}>{children}</form>;
+};
+
+const ReactMask: FC<DefaultProps> = ({ className, children }) => {
+  return <div className={className}>{children}</div>;
 };
 
 const ReactTextArea: FC<{
@@ -210,6 +219,11 @@ export const Input = styled(ReactInput)`
   &:focus {
     border-color: #ffd446;
     color: #ffd446;
+    &::-webkit-input-placeholder {
+      color: #ffd446;
+      font-family: LeagueSpartan;
+      letter-spacing: 0.1rem;
+    }
   }
   width: 85%;
   margin: 3rem auto;
@@ -273,6 +287,20 @@ export const FormButton = styled(ReactButton)`
     grid-row: 4/5;
     grid-column: 2/3;
     margin: 2rem 0 0 auto;
+  }
+`;
+
+export const PortfolioItemMask = styled(ReactMask)`
+  display: none;
+  @media screen and (min-width: 640px) {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background: #fcc203;
   }
 `;
 
