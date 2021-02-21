@@ -30,21 +30,22 @@ const showText = keyframes`
   }
 `;
 
-interface CommonProps {
+interface DefaultProps {
   className?: string;
 }
 
 interface BackgroundProps {
   backgroundColor: string;
+  isVisible?: boolean;
 }
 
-type ReactDivProps = CommonProps & BackgroundProps;
+type ReactDivProps = DefaultProps & BackgroundProps;
 
 const ReactDiv: FC<ReactDivProps> = ({ className, children }) => {
   return <div className={className}>{children}</div>;
 };
 
-const Reactparagraph: FC<CommonProps> = ({ className, children }) => {
+const Reactparagraph: FC<DefaultProps> = ({ className, children }) => {
   return <p className={className}>{children}</p>;
 };
 
@@ -54,7 +55,7 @@ export const OverlayBackground = styled(ReactDiv)`
   top: -6rem;
   z-index: 10;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh + 6rem);
   background: ${({ backgroundColor }) => backgroundColor};
   display: flex;
   justify-content: center;
@@ -63,12 +64,13 @@ export const OverlayBackground = styled(ReactDiv)`
   animation: ${SlideOverlay} 1s ${overlayAnimationPeriod} forwards;
 
   @media screen and (max-width: 640px) {
-    display: none;
+    display: ${({ isVisible }) => (isVisible ? 'flex' : 'none')};
   }
 `;
 
 export const OverlayText = styled(Reactparagraph)`
   font-size: 13rem;
+  margin: -6rem 0 0 0;
   animation: ${showText} ${overlayAnimationPeriod} forwards;
   font-family: Helvetica, sans-serif;
   font-weight: 900;

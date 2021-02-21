@@ -5,7 +5,7 @@ import { ReactComponent as LinkedIn } from '../../../assets/socialIcons/linkedin
 import { ReactComponent as Github } from '../../../assets/socialIcons/github.svg';
 import { ReactComponent as Upwork } from '../../../assets/socialIcons/upwork.svg';
 
-import { TOTAL_OVERLAY_DURATION } from '../../../util';
+import { TOTAL_OVERLAY_DURATION, StyledIconCreator } from '../../../util';
 
 const iconsDelay = `${TOTAL_OVERLAY_DURATION - 0.2}s`;
 
@@ -51,19 +51,6 @@ export const SocialIconsContainer = styled(ReactIconsContainer)`
   margin: -17rem 0 0 0;
 `;
 
-const iconCreator = (icon: FC): FC => styled(icon)`
-  width: 6rem;
-  height: 6rem;
-  margin: 1rem 4rem 1rem 0;
-  fill: #cecece;
-  transition: all 0.3s;
-  &:hover {
-    fill: #fff;
-    transform: scale(1.2);
-    transition: all 0.3s;
-  }
-`;
-
-export const LinkedInIcon = iconCreator(LinkedIn);
-export const GithubIcon = iconCreator(Github);
-export const UpworkIcon = iconCreator(Upwork);
+export const LinkedInIcon = StyledIconCreator(LinkedIn);
+export const GithubIcon = StyledIconCreator(Github);
+export const UpworkIcon = StyledIconCreator(Upwork);

@@ -50,7 +50,7 @@ export const PortfolioItemWrapper = styled(ReactPortfolioItemContainer)`
     width: 100%;
     top: 0;
     left: -100%;
-    background: linear-gradient(90deg, #1b1f30 0%, #294d86 25%);
+    background: linear-gradient(90deg, #2c006b 0%, #5e21d8 25%);
     opacity: 0.9;
     transition: all 0.4s;
   }

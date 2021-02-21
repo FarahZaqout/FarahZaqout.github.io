@@ -1,7 +1,13 @@
 import { FC, useReducer } from 'react';
 import { LandingSection } from './LandingPage.styles';
-import { NavigationMenu, Navbar, Header, Portfolio } from '../../modules';
 import { setNavState, navReducer } from '../../../context';
+import {
+  NavigationMenu,
+  Navbar,
+  Header,
+  Portfolio,
+  Footer,
+} from '../../modules';
 
 const LandingPage: FC = () => {
   const [navState, dispatch] = useReducer(navReducer, { openStatus: 'closed' });
@@ -17,6 +23,7 @@ const LandingPage: FC = () => {
       <NavigationMenu onClick={handleBurgerClick} openStatus={openStatus} />
       <Header />
       <Portfolio />
+      <Footer />
     </LandingSection>
   );
 };

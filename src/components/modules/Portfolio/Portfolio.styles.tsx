@@ -41,6 +41,7 @@ const ReactMask: FC<ReactMaskProps> = ({ className, children }) => {
   return <div className={className}>{children}</div>;
 };
 
+// TODO: extract the hook for better readability
 const ReactChildContainer: FC<ContainerProps> = ({
   className,
   children,
@@ -99,7 +100,7 @@ export const PortfolioItemContainer = styled(ReactChildContainer)`
     width: 80%;
     height: 60rem;
     max-width: 92rem;
-    margin: 0 0 10rem;
+    margin: 10rem auto 0;
     box-shadow: 0px 11px 36px 12px rgba(0, 0, 0, 0.23);
     opacity: 0;
     position: relative;
@@ -108,6 +109,7 @@ export const PortfolioItemContainer = styled(ReactChildContainer)`
       createAnimation(visible[index], 'default', index)};
   }
   @media screen and (min-width: 1300px) {
+    margin: 0 0 10rem;
     ${({ visible, index }) => createAnimation(visible[index], 'laptop', index)};
   }
   @media screen and (min-width: 2000px) {
